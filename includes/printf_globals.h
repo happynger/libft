@@ -6,14 +6,14 @@
 /*   By: otahirov <otahirov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/31 11:03:29 by otahirov          #+#    #+#             */
-/*   Updated: 2019/01/31 11:04:54 by otahirov         ###   ########.fr       */
+/*   Updated: 2019/01/31 15:09:20 by otahirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef		PRINTF_GLOBALS_H
-# define	PRINTF_GLOBALS_H
+#ifndef PRINTF_GLOBALS_H
+# define PRINTF_GLOBALS_H
 
-#include "structs.h"
+# include "structs.h"
 
 extern bool				g_flags[];
 extern bool				g_lenmod[];
