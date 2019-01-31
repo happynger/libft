@@ -12,9 +12,7 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
-# include <stdint.h>
-# include <stdlib.h>
+# include <libc.h>
 # include <limits.h>
 # include <stdarg.h>
 # include <stdbool.h>

@@ -6,11 +6,18 @@
 /*   By: otahirov <otahirov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 15:41:30 by otahirov          #+#    #+#             */
-/*   Updated: 2018/12/12 16:53:04 by otahirov         ###   ########.fr       */
+/*   Updated: 2019/01/31 11:06:43 by otahirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "printf_globals.h"
+
+/*
+**	Field Width is the min field for the var
+**	Precision is how many numbers are after . in floats
+**	!!! PLUS SHOULD BE CHECKED BY FIELD!
+*/
 
 static void	precf(char **ret)
 {
@@ -142,7 +149,7 @@ void		post(char *ret)
 	{
 		ft_strshift(&ret, 2, '0');
 		ret[1] = (g_conv == 'x') ? 'x' : 'X';
-		ret[g_field] = (g_field > 0) ? ('\0') : ('0');
+		ret[g_field] = (g_flags > 0) ? ('\0') : ('0');
 	}
 	g_bytes += ft_putstr(ret);
 	ft_strdel(&ret);

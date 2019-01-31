@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   printf_globals.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otahirov <otahirov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/19 11:17:14 by otahirov          #+#    #+#             */
-/*   Updated: 2018/09/19 11:17:26 by otahirov         ###   ########.fr       */
+/*   Created: 2019/01/31 11:03:29 by otahirov          #+#    #+#             */
+/*   Updated: 2019/01/31 11:04:54 by otahirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef		PRINTF_GLOBALS_H
+# define	PRINTF_GLOBALS_H
 
-int		ft_isalnum(int c)
-{
-	if ((ft_isalpha(c) == 1) || (ft_isdigit(c) == 1))
-		return (1);
-	return (0);
-}
+#include "structs.h"
+
+extern bool				g_flags[];
+extern bool				g_lenmod[];
+extern int				g_prec;
+extern int				g_field;
+extern int				g_bytes;
+extern char				g_conv;
+extern t_printf_table	g_table[];
+
+#endif

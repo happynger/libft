@@ -37,7 +37,7 @@ char		*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		else if (i != 0 && *haystack != needle[i])
 		{
 			(i == 0) ? (haystack += 0) : (haystack -= i - 1);
-			(i == 0) ? (len += 0) : (len += i - 1);
+			(i == 0) ? (i += 0) : (len += i - 1);
 			i = 0;
 			ptr = NULL;
 		}

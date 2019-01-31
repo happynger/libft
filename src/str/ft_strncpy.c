@@ -15,7 +15,9 @@
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	size_t	size;
+	size_t	i;
 
+	i = 0;
 	size = ft_strnlen(src, len);
 	if (size != len)
 		ft_memset(dst + size, '\0', len - size);
