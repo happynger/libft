@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   libft.1.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otahirov <otahirov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 16:02:50 by otahirov          #+#    #+#             */
-/*   Updated: 2019/01/10 11:55:43 by otahirov         ###   ########.fr       */
+/*   Updated: 2019/02/13 10:10:42 by otahirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <libc.h>
+
+# include <stdint.h>
+# include <fcntl.h>
+# include <stdlib.h>
+# include <unistd.h>
 # include <limits.h>
 # include <stdarg.h>
 # include <stdbool.h>
@@ -130,6 +134,7 @@ void					ft_strdel(char **str);
 void					ft_striter(char *s, void (*f)(char *));
 size_t					ft_strnlen(const char *s, size_t maxlen);
 char					*ft_checkdenom(const char *str, char d);
+bool					ft_strendwith(char *str, char c);
 /*
 **	CHECKS
 */
@@ -144,7 +149,7 @@ int						ft_isascii(int c);
 **	MISC
 */
 char					*ft_getenv(const char *name);
-char					*ft_pathcombine(char *p);
+char					*ft_pathcombine(char *p1, char *p2);
 void					ft_error(char *msg);
 int						ft_printf(const char *format, ...);
 /*

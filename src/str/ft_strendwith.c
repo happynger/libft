@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_uintlen.c                                       :+:      :+:    :+:   */
+/*   ft_strendwith.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otahirov <otahirov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/10 14:03:06 by otahirov          #+#    #+#             */
-/*   Updated: 2018/12/10 14:03:32 by otahirov         ###   ########.fr       */
+/*   Created: 2019/02/12 16:37:48 by otahirov          #+#    #+#             */
+/*   Updated: 2019/02/12 16:52:59 by otahirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_uintlen(uintmax_t nb)
+bool		ft_strendwith(char *str, char c)
 {
-	size_t	len;
+	long	line;
+	char	*found;
 
-	len = 1;
-	while (nb > 9)
-	{
-		len++;
-		nb = nb / 10;
-	}
-	return (len);
+	line = (long)ft_strlen(str);
+	if ((found = ft_strrchr(str, c)) == NULL)
+		return (false);
+	if (line == (found - str))
+		return (true);
+	return (false);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   postprocess.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otahirov <otahirov@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ori <ori@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 15:41:30 by otahirov          #+#    #+#             */
-/*   Updated: 2019/01/31 11:06:43 by otahirov         ###   ########.fr       */
+/*   Updated: 2019/02/03 23:12:23 by ori              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,7 +149,7 @@ void		post(char *ret)
 	{
 		ft_strshift(&ret, 2, '0');
 		ret[1] = (g_conv == 'x') ? 'x' : 'X';
-		ret[g_field] = (g_flags > 0) ? ('\0') : ('0');
+		ret[g_field] = (g_flags[4] > 0) ? ('\0') : ('0');
 	}
 	g_bytes += ft_putstr(ret);
 	ft_strdel(&ret);

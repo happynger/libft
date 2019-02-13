@@ -6,7 +6,7 @@
 #    By: otahirov <otahirov@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/10 16:03:49 by otahirov          #+#    #+#              #
-#    Updated: 2019/01/10 13:00:08 by otahirov         ###   ########.fr        #
+#    Updated: 2019/01/31 16:44:05 by otahirov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,3 +66,6 @@ git:
 	@git commit -m "Automated Update $(shell date | head -c 19 | tail -c 15 && echo)"
 	@git push
 	@echo "The update was pushed to the github"
+
+norm:
+	@echo $(shell python3 ~/Programs/42/normcheck/normcheck.py)
