@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.1.h                                          :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otahirov <otahirov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 16:02:50 by otahirov          #+#    #+#             */
-/*   Updated: 2019/02/13 10:10:42 by otahirov         ###   ########.fr       */
+/*   Updated: 2019/02/13 10:37:14 by otahirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,6 +152,8 @@ char					*ft_getenv(const char *name);
 char					*ft_pathcombine(char *p1, char *p2);
 void					ft_error(char *msg);
 int						ft_printf(const char *format, ...);
+int64_t					ft_changeendian(int64_t value);
+uint64_t				ft_uchangeendian(uint64_t value);
 /*
 **	LISTS
 */
